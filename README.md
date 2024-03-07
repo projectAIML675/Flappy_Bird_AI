@@ -1,6 +1,7 @@
 # Flappy Bird AI
 
 Flappy Bird AI is a simple implementation of the classic Flappy Bird game, enhanced with an artificial intelligence (AI) component.
+![gratis-png-pajaro-flappy-grifo-pajaro-2d-huevos-thumbnail](https://github.com/projectAIML675/Flappy_Bird_AI/assets/101319476/0c63f412-6186-46f3-9050-17f3aba62aff)
 
 ## Overview
 
