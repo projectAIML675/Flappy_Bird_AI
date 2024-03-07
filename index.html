@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+
+    <title>Flappy Bird AI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #393e46;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .div1 {
+            display: block;
+            margin-top: 20px;
+            font-size: 1.5rem;
+            color: #ea8192;
+            border-bottom: 2px solid #95dfbe;
+            padding-bottom: 10px;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+        }
+
+		.loading-screen {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			background-color:#393e46;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 9999;
+			flex-wrap: wrap;
+			align-items: center;
+			}
+
+		.loader {
+			width: 106px;
+			height: 56px;
+			display: block;
+			margin: 30px auto;
+			background-image: linear-gradient(#e1e1e1 50px, transparent 0), linear-gradient(#e1e1e1 50px, transparent 0), linear-gradient(#e1e1e1 50px, transparent 0), linear-gradient(#e1e1e1 50px, transparent 0), radial-gradient(circle 14px, #e1e1e1 100%, transparent 0);
+			background-size: 48px 15px , 15px 35px, 15px 35px, 25px 15px, 28px 28px;
+			background-position: 25px 5px, 58px 20px, 25px 17px, 2px 37px, 76px 0px;
+			background-repeat: no-repeat;
+			position: relative;
+			transform: rotate(-45deg);
+			box-sizing: border-box;
+			}
+
+			.loader::after,
+			.loader::before {
+			content: '';
+			position: absolute;
+			width: 56px;
+			height: 56px;
+			border: 6px solid #e1e1e1;
+			border-radius: 50%;
+			left: -45px;
+			top: -10px;
+			background-repeat: no-repeat;
+			background-image: linear-gradient(#e1e1e1 64px, transparent 0), linear-gradient(#e1e1e1 66px, transparent 0), radial-gradient(circle 4px, #e1e1e1 100%, transparent 0);
+			background-size: 40px 1px , 1px 40px, 8px 8px;
+			background-position: center center;
+			box-sizing: border-box;
+			animation: bike 0.3s linear infinite;
+			}
+
+			.loader::before {
+			left: 25px;
+			top: 60px;
+			}
+
+			@keyframes bike {
+			0% {
+				transform: rotate(0deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+			} 
+    </style>
+</head>
+<body>
+	<div class="loading-screen">
+		<div class="loader"></div>
+	  </div>
+    <script language="javascript" type="text/javascript" src="lib/ga.js"></script>
+    <script language="javascript" type="text/javascript" src="lib/nn.js"></script>
+    <script language="javascript" type="text/javascript" src="lib/matrix.js"></script>
+    <script language="javascript" type="text/javascript" src="lib/pipe.js"></script>
+    <script language="javascript" type="text/javascript" src="lib/bird.js"></script>
+    <script src="js/game.js"></script>
+	<script>
+		window.addEventListener('load', function () {
+
+		setTimeout(function () {
+
+			document.querySelector('.loading-screen').style.display = 'none';
+
+		}, 1300);
+
+		});
+	</script>
+    <span class="div1">
+        Flappy Bird AI 
+    </span>
+</body>
+</html>
